@@ -5,11 +5,10 @@ import sys
 from time import sleep
 from src.components import hero 
 
-os.system("chcp 65001")
-
 city_list = ["Taipei", "Osaka", "Toronto", "Busan", "Vancouver", "Singapore"]
 die = 1
 picked_city = ""
+inventory = []
 
 def dice_animation():
     dice = [u'⚀',u'⚁',u'⚂',u'⚃',u'⚄',u'⚅']
@@ -73,17 +72,53 @@ player_name = str(input("'Actually, pardon my manners, I have not yet introduced
 print("'I can't say I have ever heard of that name, but if that is your name, then that is your name. As I have said before, %s, you must go and retrieve my scroll. If it falls into the wrong hands, it could mean the end of the world as we know it. I have prepared some gear for you right here. I hope it suffices. Once you are ready, please head out and make your way to the nearest port.'\n" % (player_name))
 sleep(3)
 
-quest_1_1 = input("Andrew The Grey stands up, snaps his fingers, and poofs into thin air. You blink several times, trying to make sense of what you just witnessed. You then look to the side of the table and see a bag. In it are a bow and quiver, a short-sword, and a note saying 'PICK ONLY ONE, DO NOT BE GREEDY.' Which will you pick? [bow, sword] ")
+print("Andrew The Grey stands up, snaps his fingers, and poofs into thin air. You blink several times, trying to make sense of what you just witnessed. You then look to the side of the table and see a bag. In it are a bow and quiver, a short-sword, and a note saying 'PICK ONLY ONE, DO NOT BE GREEDY.'")
 
-#TODO: Implement a function here for checking if the user uses the correct stuff
+def quest_1_1_check():
+    quest_1_1 = input("Which will you pick? [bow, sword] ")
 
-if quest_1_1 == 'bow':
-    sleep(1)
-    print("YOU HAVE PICKED THE BOW AND ARROW!")
-elif quest_1_1 == 'sword':
-    sleep(1)
-    print("YOU HAVE PICKED THE SHORT SWORD!")
-else:
-    quest_1_1 = input("Please try again - which will you choose? [bow, sword] ")
+    if quest_1_1 == 'bow':
+        sleep(1)
+        print("YOU HAVE PICKED THE BOW AND ARROW!")
+        sleep(1)
+    elif quest_1_1 == 'sword':
+        sleep(1)
+        print("YOU HAVE PICKED THE SHORT SWORD!")
+        sleep(1)
+    else:
+        sleep(1)
+        print("Please try again.")
+        sleep(1)
+        quest_1_1_check()
 
-print("You pick your %s up and look around." % (quest_1_1))
+quest_1_1_check()
+
+print("You pick your %s up and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (quest_1_1))
+sleep(1)
+
+def quest_1_2_check():
+    quest_1_2 = input("What will you do? [inspect, leave] ")
+
+    if quest_1_2 == 'inspect':
+        sleep(1)
+        print("You start looking around the room in hopes of finding anything useful. The room is empty, save for the table and two chairs, and perhaps the moss. You walk up to the moss and look at it closely. Something shiny catches your eye. You pick it up. It's a key!")
+        inventory.append('key')
+        sleep(1)
+    elif quest_1_2 == 'leave' and 'key' in inventory:
+        sleep(1)
+        print("You grab your weapon and begin to make your way to the stairs. You go up and reach a door. Freedom! It's time to open it and begin your adventure.")
+        sleep(1)
+    elif quest_1_2 == 'leave':
+        sleep(1)
+        print("You grab your weapon and begin to make your way to the stairs. You go up and reach a door. Freedom! You try to open it, but it's locked. The key must still be in the room.")
+        sleep(1)
+        print("You return to the room.")
+        sleep(1)
+        quest_1_2_check()
+    else:
+        sleep(1)
+        print("Please try again.")
+        sleep(1)
+        quest_1_2_check()
+
+quest_1_2_check()
