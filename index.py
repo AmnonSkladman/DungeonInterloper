@@ -9,6 +9,8 @@ city_list = ["Taipei", "Osaka", "Toronto", "Busan", "Vancouver", "Singapore"]
 die = 1
 picked_city = ""
 inventory = []
+weapon = []
+armour = []
 
 def dice_animation():
     dice = [u'⚀',u'⚁',u'⚂',u'⚃',u'⚄',u'⚅']
@@ -80,10 +82,12 @@ def quest_1_1_check():
     if quest_1_1 == 'bow':
         sleep(1)
         print("YOU HAVE PICKED THE BOW AND ARROW!")
+        weapon.append('bow')
         sleep(1)
     elif quest_1_1 == 'sword':
         sleep(1)
         print("YOU HAVE PICKED THE SHORT SWORD!")
+        weapon.append('short-sword')
         sleep(1)
     else:
         sleep(1)
@@ -93,7 +97,7 @@ def quest_1_1_check():
 
 quest_1_1_check()
 
-print("You pick your %s up and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (quest_1_1))
+print("You pick your %s up and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (weapon[0]))
 sleep(1)
 
 def quest_1_2_check():
