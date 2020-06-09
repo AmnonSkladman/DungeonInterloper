@@ -126,3 +126,10 @@ def quest_1_2_check():
         quest_1_2_check()
 
 quest_1_2_check()
+
+print("You slide the key into the door and turn it. The door unlocks with a loud click sound. The key is now stuck in the door and no longer useable. You then open the door and see that you were in the basement of a once-glorious tavern that now lies in ruins. The wind blows gracefully, and all around you are green meadows with majestic mountains standing in the distance.")
+inventory.remove('key')
+sleep(3)
+
+print('''\u001b[1m\u001b[31mD \u001b[33mU \u001b[31mN \u001b[35mG \u001b[33mE \u001b[31mO \u001b[35mN   \u001b[31mI \u001b[33mN \u001b[35mT \u001b[31mE \u001b[33mR \u001b[35mL \u001b[33mO \u001b[31mP \u001b[33mE \u001b[31mR\u001b[0m''')
+sleep(3)
