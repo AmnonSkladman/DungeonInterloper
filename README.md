@@ -11,8 +11,6 @@ There are RNGs being used to determine outcomes, such as die rolls. These will e
 NOT YET IMPLEMENTED
 ## If Statements
 These are to determine logic in the game and make the appropriate decisions and advancements. These are also in place to hopefully prevent any bugs or crashes.
-## Switch Statements
-See above, "If Statements".
 ### And more...
 YET TO BE IMPLEMENTED
 
