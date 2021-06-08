@@ -1,3 +1,5 @@
+![Dungeon Interloper hero banner](https://cdn.discordapp.com/attachments/304280515899424768/851848925027369021/Capture.PNG "Dungeon Interloper hero banner")
+
 # DungeonInterloper
 This is a classic, text-based dungeon crawler, similar to the retro RPGs from the past. It's mostly a way for me to learn Python and get better at it, but also a fun game, too.
 
@@ -11,6 +13,18 @@ There are RNGs being used to determine outcomes, such as die rolls. These will e
 
 ## If Statements
 These are to determine logic in the game and make the appropriate decisions and advancements. These are also in place to hopefully prevent any bugs or crashes.
+
+## ANSI Escape Codes
+
+- Black: \u001b[30m
+- Red: \u001b[31m
+- Green: \u001b[32m
+- Yellow: \u001b[33m
+- Blue: \u001b[34m
+- Magenta: \u001b[35m
+- Cyan: \u001b[36m
+- White: \u001b[37m
+- Reset: \u001b[0m
 
 ### And more...
 
@@ -28,6 +42,8 @@ It's a classic-style, text-based dungeon crawler game. Just read the prompts and
 - `python index.py`
 - Enjoy!
 
+Note: You may need to resize your window to accomodate the banners and other similar content based on your font size and screen resolution. I currently am not sure how to auto-resize content in Python. I am looking for a solution.
+
 # Credits
 
 ## Source code
@@ -35,3 +51,6 @@ https://github.com/AmnonSkladman/DungeonInterloper
 
 ## Banner
 Unknown? Still trying to find out the original artist
+
+## Converting images to ASCII + ANSI
+https://manytools.org/hacker-tools/convert-images-to-ascii-art/
