@@ -51,3 +51,6 @@ https://github.com/AmnonSkladman/DungeonInterloper
 
 ## Banner
 Unknown? Still trying to find out the original artist
+
+## Converting images to ASCII + ANSI
+https://manytools.org/hacker-tools/convert-images-to-ascii-art/
