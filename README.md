@@ -26,7 +26,13 @@ These are to determine logic in the game and make the appropriate decisions and 
 - White: \u001b[37m
 - Reset: \u001b[0m
 
-### And more...
+# Future Goals
+- Make it modular
+    - It will read "default settings" from a file
+    - You can update the file and replace things as you please, e.g. locations, names, gear, etc.
+    - This can potentially work as a system to allow people to add their own "mods"
+- Add a class system, with 2-3 skills and 1 ability for each
+- Become a dungeon-crawler building platform rather than remain one single game
 
 # How To Play
 It's a classic-style, text-based dungeon crawler game. Just read the prompts and answer the questions as they come up. Please make sure to type the answers as accurately as possible. Sometimes, possible ones are offered, such as "y" or "n". Other times, you have to use your intuition and try different things. This game won't always hold your hand as you play it.
