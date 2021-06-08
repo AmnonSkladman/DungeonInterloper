@@ -1,3 +1,5 @@
+![Dungeon Interloper hero banner](https://cdn.discordapp.com/attachments/304280515899424768/851848925027369021/Capture.PNG "Dungeon Interloper hero banner")
+
 # DungeonInterloper
 This is a classic, text-based dungeon crawler, similar to the retro RPGs from the past. It's mostly a way for me to learn Python and get better at it, but also a fun game, too.
 
