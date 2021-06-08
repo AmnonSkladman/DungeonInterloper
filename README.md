@@ -40,6 +40,8 @@ It's a classic-style, text-based dungeon crawler game. Just read the prompts and
 - `python index.py`
 - Enjoy!
 
+Note: You may need to resize your window to accomodate the banners and other similar content based on your font size and screen resolution. I currently am not sure how to auto-resize content in Python. I am looking for a solution.
+
 # Credits
 
 ## Source code
