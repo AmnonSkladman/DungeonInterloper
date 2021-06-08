@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from random import choice, randint
 import os
-os.system('')
+os.system('') # Allows to use ANSI escape sequences on Windows
 import sys
 from time import sleep
 from src.components import hero 
@@ -78,16 +78,16 @@ sleep(3)
 print("Andrew The Grey stands up, snaps his fingers, and poofs into thin air. You blink several times, trying to make sense of what you just witnessed. You then look to the side of the table and see a bag. In it are a bow and quiver, a short-sword, and a note saying 'PICK ONLY ONE, DO NOT BE GREEDY.'")
 
 def quest_1_1_check():
-    quest_1_1 = input("Which will you pick? [bow, sword] ")
+    quest_1_1 = input("Which will you pick? [\u001b[33mbow\u001b[0m, \u001b[33msword\u001b[0m] ")
 
     if quest_1_1 == 'bow':
         sleep(1)
-        print("YOU HAVE PICKED THE BOW AND ARROW!")
+        print("YOU HAVE PICKED THE \u001b[33mBOW AND ARROW\u001b[0m!")
         weapon.append('bow')
         sleep(1)
     elif quest_1_1 == 'sword':
         sleep(1)
-        print("YOU HAVE PICKED THE SHORT SWORD!")
+        print("YOU HAVE PICKED THE \u001b[33mSHORT SWORD\u001b[0m!")
         weapon.append('short-sword')
         sleep(1)
     else:
@@ -98,15 +98,15 @@ def quest_1_1_check():
 
 quest_1_1_check()
 
-print("You pick your\u001b[33m%s\u001b[0mup and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (weapon[0]))
+print("You pick your \u001b[33m%s\u001b[0m up and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (weapon[0]))
 sleep(1)
 
 def quest_1_2_check():
-    quest_1_2 = input("What will you do? [inspect, leave] ")
+    quest_1_2 = input("What will you do? [\u001b[33minspect\u001b[0m, \u001b[33mleave\u001b[0m] ")
 
     if quest_1_2 == 'inspect':
         sleep(1)
-        print("You start looking around the room in hopes of finding anything useful. The room is empty, save for the table and two chairs, and perhaps the moss. You walk up to the moss and look at it closely. Something shiny catches your eye. You pick it up. It's a key!")
+        print("You start looking around the room in hopes of finding anything useful. The room is empty, save for the table and two chairs, and perhaps the moss. You walk up to the moss and look at it closely. Something shiny catches your eye. You pick it up. It's a \u001b[33mkey\u001b[0m!")
         inventory.append('key')
         sleep(1)
     elif quest_1_2 == 'leave' and 'key' in inventory:
@@ -115,7 +115,7 @@ def quest_1_2_check():
         sleep(1)
     elif quest_1_2 == 'leave':
         sleep(1)
-        print("You grab your weapon and begin to make your way to the stairs. You go up and reach a door. Freedom! You try to open it, but it's locked. The key must still be in the room.")
+        print("You grab your weapon and begin to make your way to the stairs. You go up and reach a door. Freedom! You try to open it, but it's locked. The \u001b[33mkey\u001b[0m must still be in the room.")
         sleep(1)
         print("You return to the room.")
         sleep(1)
@@ -128,7 +128,7 @@ def quest_1_2_check():
 
 quest_1_2_check()
 
-print("You slide the key into the door and turn it. The door unlocks with a loud click sound. The key is now stuck in the door and no longer useable. You then open the door and see that you were in the basement of a once-glorious tavern that now lies in ruins. The wind blows gracefully, and all around you are green meadows with majestic mountains standing in the distance.")
+print("You slide the key into the door and turn it. The door unlocks with a loud click sound. The \u001b[33mkey\u001b[0m is now stuck in the door and no longer useable. You then open the door and see that you were in the basement of a once-glorious tavern that now lies in ruins. The wind blows gracefully, and all around you are green meadows with majestic mountains standing in the distance.")
 inventory.remove('key')
 sleep(3)
 
