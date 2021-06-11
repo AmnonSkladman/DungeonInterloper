@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-from random import choice, randint
+from random import choice, randint # random number generator
 import os
 os.system('') # Allows to use ANSI escape sequences on Windows
 import sys
-from time import sleep
-from src.components import hero 
+from time import sleep # adds ability to "wait"
+from src.components.images.hero import hero # hero banner
 
+#default values
 city_list = ["Taipei", "Osaka", "Toronto", "Busan", "Vancouver", "Singapore"]
 die = 1
 picked_city = ""
@@ -13,12 +14,14 @@ inventory = []
 weapon = []
 armour = []
 
+# animates dice by showing a die and replacing it with next one
 def dice_animation():
     dice = [u'⚀',u'⚁',u'⚂',u'⚃',u'⚄',u'⚅']
     for die in dice:
         print(die, end="\r", flush=True)
         sleep(0.1)
 
+# runs dice animation 3 times and prints result from RNG
 def roll_die():
     global die
     print("The old man picks the die up and rolls it...")
@@ -37,6 +40,7 @@ def roll_die():
     die_value = switcher.get(die, "Uhh, I screwed up... Let's try again!")
     print("He rolled a \u001b[33m%s\u001b[0m.\n" % (die_value))
 
+# picks a random city
 def pick_city():
     global picked_city
     picked_city = choice(city_list)
@@ -63,9 +67,9 @@ if (pre_quest_1 == 'y'):
     sleep(3)
 else:
     sleep(1.5)
-    print("'Very well, I suppose you're not one for adventures after all. In that case, I must leave you, but you shall be here forever.' The old man disappears, and the room grows dark. This is your demise. \u001b[31mGAME OVER!\u001b[0m")
+    print("'Very well, I suppose you're not one for adventures after all. In that case, best of luck, and don't let the spiders kill you...' The old man disappears, and the room grows dark. This is your demise. \u001b[31mGAME OVER!\u001b[0m")
     sleep(3)
-    sys.exit()
+    sys.exit() # exits the game if player chooses "n"
 
 print("'You may be curious as to why you are here. I require your help. An important scroll of mine has been stolen, and I need it back. I can tell from your visible confusion that you did not come here voluntarily, and most likely wish to return home. If you complete this job successfuly, I promise I will help you return home. However, I need your complete guarantee that you will not fail this mission or seek your own path until it is complete. You will need to go to \u001b[33m%s\u001b[0m.'\n" % (picked_city))
 sleep(3)
@@ -132,5 +136,6 @@ print("You slide the key into the door and turn it. The door unlocks with a loud
 inventory.remove('key')
 sleep(3)
 
+# prints game title at the end of the prologue
 print('''\u001b[1m\u001b[31mD \u001b[33mU \u001b[31mN \u001b[35mG \u001b[33mE \u001b[31mO \u001b[35mN   \u001b[31mI \u001b[33mN \u001b[35mT \u001b[31mE \u001b[33mR \u001b[35mL \u001b[33mO \u001b[31mP \u001b[33mE \u001b[31mR\u001b[0m''')
 sleep(3)
