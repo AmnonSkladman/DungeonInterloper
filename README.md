@@ -56,7 +56,8 @@ Note: You may need to resize your window to accomodate the banners and other sim
 https://github.com/AmnonSkladman/DungeonInterloper
 
 ## Banner
-Unknown? Still trying to find out the original artist
+Unknown? Still trying to find out the original artist. Let me know if you find out!
 
 ## Converting images to ASCII + ANSI
-https://manytools.org/hacker-tools/convert-images-to-ascii-art/
+- https://manytools.org/hacker-tools/convert-images-to-ascii-art/
+- https://dom111.github.io/image-to-ansi/
