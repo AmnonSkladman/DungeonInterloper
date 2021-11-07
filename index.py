@@ -38,7 +38,7 @@ def roll_die():
         6: '6'
     }
     die_value = switcher.get(die, "Uhh, I screwed up... Let's try again!")
-    print("He rolled a \u001b[33m%s\u001b[0m.\n" % (die_value))
+    print("\nHe rolled a \u001b[33m%s\u001b[0m." % (die_value))
 
 # picks a random city
 def pick_city():
@@ -53,7 +53,7 @@ sleep(3)
 roll_die()
 sleep(1)
 
-print("'Ah, \u001b[33m%s\u001b[0m, not a bad number. Although it may mean nothing to you right now, it will come back in the near future, either to aid you, or harm you.'" % (die))
+print("\n'Ah, \u001b[33m%s\u001b[0m, not a bad number. Although it may mean nothing to you right now, it will come back in the near future, either to aid you, or harm you.'" % (die))
 sleep(3)
 
 pick_city()
