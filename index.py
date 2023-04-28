@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
 from random import choice, randint # random number generator
 import os
-os.system('') # Allows to use ANSI escape sequences on Windows
 import sys
 from time import sleep # adds ability to "wait"
 import src.utils.globals as globals
 from src.components.images.hero import heroAlt # hero banner
 from src.utils.dice import *
 
-globals.init()
-
-# Default values
-city_list = ["Taipei", "Osaka", "Toronto", "Seoul", "Vancouver", "Amsterdam", "London", "Montreal", "Singapore"]
-picked_city = ""
+os.system('') # Allows to use ANSI escape sequences on Windows
+globals.init() # Initializes all global variables and functions
 
 # Picks a random city
 def pick_city():
-    global picked_city
-    picked_city = choice(city_list)
+    globals.picked_city = choice(globals.city_list)
 
 sleep(3)
 
@@ -45,7 +40,7 @@ else:
     sleep(3)
     sys.exit() # exits the game if player chooses "n"
 
-print("'You may be curious as to why you are here. Well, you see, I require your help. An important scroll of mine has been stolen from my library, and I need it back. I can tell from your visible confusion that you did not come here voluntarily, and most likely wish to return home. If you help me, I promise I will help you in return. If you agree, then you will need to go to \u001b[33m%s\u001b[0m.'\n" % (picked_city))
+print("'You may be curious as to why you are here. Well, you see, I require your help. An important scroll of mine has been stolen from my library, and I need it back. I can tell from your visible confusion that you did not come here voluntarily, and most likely wish to return home. If you help me, I promise I will help you in return. If you agree, then you will need to go to \u001b[33m%s\u001b[0m.'\n" % (globals.picked_city))
 sleep(3)
 
 player_name = str(input("'Actually, pardon my manners, I have not even introduced myself yet! I am Andrew The Grey, and you are?' "))
