@@ -13,9 +13,6 @@ globals.init()
 # Default values
 city_list = ["Taipei", "Osaka", "Toronto", "Seoul", "Vancouver", "Amsterdam", "London", "Montreal", "Singapore"]
 picked_city = ""
-inventory = []
-weapon = []
-armour = []
 
 # Picks a random city
 def pick_city():
@@ -64,12 +61,12 @@ def quest_1_1_check():
     if quest_1_1 == 'bow':
         sleep(1)
         print("\nYOU HAVE PICKED THE \u001b[33mBOW AND ARROW\u001b[0m!")
-        weapon.append('bow')
+        globals.weapon.append('bow')
         sleep(1)
     elif quest_1_1 == 'sword':
         sleep(1)
         print("\nYOU HAVE PICKED THE \u001b[33mSHORT SWORD\u001b[0m!")
-        weapon.append('short-sword')
+        globals.weapon.append('short-sword')
         sleep(1)
     else:
         sleep(1)
@@ -79,7 +76,7 @@ def quest_1_1_check():
 
 quest_1_1_check()
 
-print("\nYou pick your \u001b[33m%s\u001b[0m up and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (weapon[0]))
+print("\nYou pick your \u001b[33m%s\u001b[0m up and look around. As you see it, there are only two real options. You could either inspect the room to see if you could find anything in the moss, or you could leave the room and go upstairs." % (globals.weapon[0]))
 sleep(1)
 
 def quest_1_2_check():
@@ -88,9 +85,9 @@ def quest_1_2_check():
     if quest_1_2 == 'inspect':
         sleep(1)
         print("\nYou start looking around the room in hopes of finding anything useful. The room is empty, save for the table and two chairs, and perhaps the moss. You walk up to the moss and look at it closely. Something shiny catches your eye. You pick it up. It's a \u001b[33mkey\u001b[0m!")
-        inventory.append('key')
+        globals.inventory.append('key')
         sleep(1)
-    elif quest_1_2 == 'leave' and 'key' in inventory:
+    elif quest_1_2 == 'leave' and 'key' in globals.inventory:
         sleep(1)
         print("\nYou grab your weapon and begin to make your way to the stairs. You go up and reach a door. Freedom! It's time to open it and begin your adventure.")
         sleep(1)
@@ -110,7 +107,7 @@ def quest_1_2_check():
 quest_1_2_check()
 
 print("\nYou slide the key into the door and turn it. The door unlocks with a loud click sound. The \u001b[33mkey\u001b[0m is now stuck in the door and no longer useable. You then open the door and see that you were in the basement of a once-glorious tavern that now lies in ruins. The wind blows gracefully, and all around you are green meadows with majestic mountains at the edge of the horizon.\n\nIn the distance, you see Andrew The Grey sitting on a boulder, waiting for you. This is where your adventure begins.\n")
-inventory.remove('key')
+globals.inventory.remove('key')
 sleep(3)
 
 # prints game title at the end of the prologue
