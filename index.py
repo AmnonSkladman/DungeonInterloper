@@ -4,42 +4,18 @@ import os
 os.system('') # Allows to use ANSI escape sequences on Windows
 import sys
 from time import sleep # adds ability to "wait"
+import src.utils.globals as globals
 from src.components.images.hero import heroAlt # hero banner
+from src.utils.dice import *
+
+globals.init()
 
 # Default values
 city_list = ["Taipei", "Osaka", "Toronto", "Seoul", "Vancouver", "Amsterdam", "London", "Montreal", "Singapore"]
-die = 1
 picked_city = ""
 inventory = []
 weapon = []
 armour = []
-
-# Animates dice by showing a die and replacing it with next one
-def dice_animation():
-    dice = [u'⚀',u'⚁',u'⚂',u'⚃',u'⚄',u'⚅']
-    for die in dice:
-        print(die, end="\r", flush=True)
-        sleep(0.1)
-
-# Runs dice animation 3 times and prints result from RNG
-def roll_die():
-    global die
-    print("The old man picks the die up and rolls it...\n")
-    sleep(0.25)
-    for _ in range(3):
-        dice_animation()
-    die = randint(1,6)
-    switcher = {
-        1: '1',
-        2: '2',
-        3: '3',
-        4: '4',
-        5: '5',
-        6: '6'
-    }
-    # Returns the die value, or a default value.
-    die_value = switcher.get(die, "I think my die is broken...")
-    print("\n\nHe rolled a \u001b[33m%s\u001b[0m.\n" % (die_value))
 
 # Picks a random city
 def pick_city():
@@ -48,13 +24,13 @@ def pick_city():
 
 sleep(3)
 
-print("You open your eyes and find yourself sitting in what looks to be a dungeon, the walls wet with moisture and covered in moss. You remember being on a plane on your way to see your in-laws, and now you're...here? Where even is \"here\"?\n\nIn front of you sits an old man in jade-coloured robes, his beard reaching his chest. You are both seated at a small, square table, one die upon it. The die is facing up, revealing the number \u001b[33m%s\u001b[0m.\n\nHe smiles at you as he picks the die up, and rolls it gently.\n" % (die))
+print("You open your eyes and find yourself sitting in what looks to be a dungeon, the walls wet with moisture and covered in moss. You remember being on a plane on your way to see your in-laws, and now you're...here? Where even is \"here\"?\n\nIn front of you sits an old man in jade-coloured robes, his beard reaching his chest. You are both seated at a small, square table, one die upon it. The die is facing up, revealing the number \u001b[33m%s\u001b[0m.\n\nHe smiles at you as he picks the die up, and rolls it gently.\n" % (globals.die))
 sleep(3)
 
 roll_die()
 sleep(3)
 
-print("'Ah, \u001b[33m%s\u001b[0m, interesting. Although it may mean nothing to you right now, it will make sense very soon, I promise.'" % (die))
+print("'Ah, \u001b[33m%s\u001b[0m, interesting. Although it may mean nothing to you right now, it will make sense very soon, I promise.'" % (globals.die))
 sleep(3)
 
 pick_city()
