@@ -1,17 +1,17 @@
 ![Dungeon Interloper hero banner](/src/components/images/hero/hero-preview.png "Dungeon Interloper hero banner")
 
 # DungeonInterloper
-This is a classic, text-based dungeon crawler, similar to the retro RPGs from the past, with some basic images are provided. It's mostly a way for me to learn Python and get better at it, but a fun game, too.
+This is a classic, text-based dungeon crawler, similar to the retro RPGs from the past, with some basic images provided. It's mostly a way for me to learn Python and get better at it, but a fun game, too.
 
 # Story
-You awake in a dungeon, no memory of how you got there. The last thing you do remember, though, was that you were on a flight going somewhere. Now, you're trying to piece everything together and make your way back home before you get stuck here forever.
+You awake in a dungeon, no memory of how you got there. The last thing you do remember, though, was that you were on a flight going to see your in-laws. Now, you're trying to piece everything together and make your way back home before you get stuck here forever.
 
 # Mechanics
 
 ## Random Number Generator
 There are RNGs being used to determine outcomes, such as die rolls. These will ensure that the game will usually play out differently every time.
 
-## If Statements
+## If and Switch Statements
 These are to determine logic in the game and make the appropriate decisions and advancements. These are also in place to hopefully prevent any bugs or crashes.
 
 ## ANSI Escape Codes
@@ -42,13 +42,11 @@ Just read the prompts and answer the questions as they come up. Please make sure
 - Open your favourite terminal
     - **MacOS:** [Terminal](https://support.apple.com/en-ca/guide/terminal/welcome/mac) or [iTerm 2](https://www.iterm2.com/downloads.html) are recommended
     - **Windows:** [Windows Terminal](https://www.microsoft.com/en-ca/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) is recommended
-- `cd` into a folder
-- `git clone https://github.com/AmnonSkladman/DungeonInterloper.git`
-- `cd DungeonInterloper`
-- `python index.py`
+- Clone the repo and `cd` into it
+- `Python3 index.py`
 - Enjoy!
 
-Note: You may need to resize your window to accomodate the banners and other similar content based on your font size and screen resolution. I currently am not sure how to auto-resize content in Python. I am looking for a solution.
+> Note: You may need to resize your window to accomodate the banners and other similar content based on your font size and screen resolution. I currently am not sure how to auto-resize content in Python. I am looking for a solution.
 
 # Credits
 
