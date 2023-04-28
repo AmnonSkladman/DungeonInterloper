@@ -11,7 +11,7 @@ def dice_animation():
 
 # Runs dice animation 3 times and prints result from RNG
 def roll_die():
-    print("The old man picks the die up and rolls it...\n")
+    print("The die rolls gently on the table...\n")
     sleep(0.25)
 
     for _ in range(3):

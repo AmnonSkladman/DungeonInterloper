@@ -59,3 +59,7 @@ Unknown? Still trying to find out the original artist. Let me know if you find o
 ## Converting images to ASCII + ANSI
 - https://manytools.org/hacker-tools/convert-images-to-ascii-art/
 - https://dom111.github.io/image-to-ansi/
+
+## ASCII text
+- https://fsymbols.com/generators/carty/
+- https://emojicombos.com/sword
